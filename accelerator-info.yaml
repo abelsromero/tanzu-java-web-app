@@ -1,29 +1,21 @@
-id: a8f214c0-649a-4ab2-ae24-54f41475dab4
-timestamp: 2023-08-21T10:52:23Z
-username: guest
+id: 495679a5-209d-4a44-aa26-a0669c58e3c2
+timestamp: 2023-11-06T13:53:42.645Z
 source: TAP-GUI
+username: guest
 accelerator:
   name: tanzu-java-web-app
-  source:
-    image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:580460d8fb05c229ed34bf348592596b1218540975ac9982666d5fd3f7fcf00e
 fragments:
-  - name: tap-workload
-    source:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:d9c7d8d322f0740666ba7c752a9174d1eb66274338c4f0e211edb1d448104c2a
   - name: build-wrapper-gradle
-    source:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
   - name: build-wrapper-maven
-    source:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: devcontainer
   - name: java-version
-    source:
-      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
 options:
-  buildTool: gradle
-  ide: intellij
-  includeBuildToolWrapper: true
-  javaVersion: 17
-  nativeBuild: true
   projectName: tanzu-java-web-app
+  buildTool: gradle
   springBootVersion: 3.1
+  nativeBuild: true
+  javaVersion: 11
+  includeBuildToolWrapper: true
+  includeDevContainer: false
+  ide: intellij

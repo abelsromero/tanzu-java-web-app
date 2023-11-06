@@ -1,7 +1,7 @@
 plugins {
-    id("org.springframework.boot") version "3.1.2"
-    id("io.spring.dependency-management") version "1.1.0"
-    id("org.graalvm.buildtools.native") version "0.9.20"
+    id("org.springframework.boot") version "3.1.5"
+    id("io.spring.dependency-management") version "1.1.3"
+    id("org.graalvm.buildtools.native") version "0.9.27"
     id("java")
 }
 
@@ -30,6 +30,7 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-tasks.named<Jar>("jar") {
-    enabled = false
-}
+// Remove or else Native build does not work
+//tasks.named<Jar>("jar") {
+//    enabled = false
+//}
